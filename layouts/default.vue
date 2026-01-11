@@ -51,7 +51,7 @@
               ></path>
             </svg>
           </a>
-          <p class="text-sm">© 2023 Kunsect LLC. All rights reserved.</p>
+          <p class="text-sm">© {{ currentYear }} All rights reserved.</p>
         </div>
       </div>
     </footer>
@@ -60,6 +60,11 @@
 
 <script>
 export default {
+  data() {
+    return {
+      currentYear: new Date().getFullYear()
+    }
+  },
   head() {
     return {
       title: 'Keywords ROI Calculator',
